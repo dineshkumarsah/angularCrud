@@ -2,14 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'details',
-    loadChildren: './components/details/details.module#DetailsModule'
-    },
-    {
-      path: 'details',
-      loadChildren: () => import('./components/details/details.module').then(m => m.DetailsModule)
-    },
+  { path: '', loadChildren: () => import(`./users/users.module`).then(m => m.UsersModule) }
 ];
 
 @NgModule({

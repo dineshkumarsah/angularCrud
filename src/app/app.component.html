@@ -1,7 +1,6 @@
-<div>
-  <ul>
-    <li><a routerLink="details">Detauls</a></li>
-  </ul>
+<div #stickyMenu class="" [class.sticky]="sticky">
+  <app-header></app-header>
 </div>
-
-<router-outlet></router-outlet>
+<div class="mt-6" >
+  <router-outlet></router-outlet>
+</div>
