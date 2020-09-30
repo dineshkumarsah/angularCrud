@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "technoarchsoftwares"
+    }
+  },
+  "defaultProject": "technoarchsoftwares",
+  "cli": {
+    "analytics": "b2048297-74b2-47ec-b58d-c710dd1bded3"
+  }
 }
