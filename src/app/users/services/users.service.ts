@@ -12,6 +12,16 @@ export class UsersService {
     const url = 'https://jsonplaceholder.typicode.com/users';
     return this.http.get(url);
   }
+  editUser(userData) {
+    const url = `https://jsonplaceholder.typicode.com/users/${userData.id}`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json; charset=UTF-8'
+      })
+    };
+
+    return this.http.put(url, userData, httpOptions);
+  }
 
 
   createUser(userData) {

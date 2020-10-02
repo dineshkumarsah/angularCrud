@@ -1,5 +1,5 @@
-<div class="container">
-    <h1>View Post</h1>
+<div class="container "  *ngIf=" userData">
+    <!-- <h1>View Post</h1>
 
     <a href="#" routerLink="/user/index" class="btn btn-primary">Back</a>
 
@@ -20,6 +20,17 @@
     <div>
         <strong>Email:</strong>
         <p>{{ userData.email}}</p>
-    </div>
+    </div> -->
+
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+          <h5 class="card-title">User:{{ userData.name }} </h5>
+         
+          <p class="card-text">Name:{{ userData.username }} </p>
+          <p class="card-text">Name:{{ userData.email }} </p>
+          <a routerLink="/user/index" class="btn btn-primary">Back</a>
+        
+        </div>
+      </div>
 
 </div>

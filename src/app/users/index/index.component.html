@@ -1,26 +1,37 @@
 <div class="container">
-    <h1>Angular CRUD Example - ItSolutionStuff.com</h1>
+  <h6>Users</h6>
+   
+    <div class="addUser">
+      <a title="Add new User" routerLink="/user/create/" class="btn btn-success mt-4 mb-2">+</a>
+    </div>
   
-    <a href="#" routerLink="/user/create/" class="btn btn-success">Create New Post</a>
+    
     
     <table class="table table-bordered">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>User Name</th>
-        <th>Email</th>
-        <th width="220px">Action</th>
-      </tr>
-      <tr *ngFor="let data of userData">
-        <td>{{ data.id }}</td>
-        <td>{{ data.name }}</td>
-        <td>{{ data.username }}</td>
-        <td>{{ data.email }}</td>
-        <td>
-          <a href="#" [routerLink]="['/user/', data.id, 'view']" class="btn btn-info">View</a>
-          <a href="#" [routerLink]="['/user/', data.id, 'edit']" class="btn btn-primary">Edit</a>
-          <button type="button" (click)="deleteUser(data.id)" class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th width="220px">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of userData">
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.username }}</td>
+          <td>{{ data.email }}</td>
+          <td>
+            <a href="#" [routerLink]="['/user/', data.id, 'view']" class="btn btn-info btn-sm m-2">View</a>
+            <a  [routerLink]="['/user/', data.id, 'edit']" class="btn btn-primary btn-sm m-2">Edit</a>
+            <button type="button" (click)="deleteUser(data.id)" class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    
+     
     </table>
  </div>
+ 

@@ -1,0 +1,15 @@
+
+.back {
+    float: right;
+    margin-bottom: 10px;
+ 
+   
+}
+
+.new-create{
+    float: left; 
+    margin-bottom: 10px; 
+}
+form{
+    clear: both;
+}
